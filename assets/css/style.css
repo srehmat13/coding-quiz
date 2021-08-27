@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0;
+    padding: 25px 75px;
+}
+
+  h4 a {
+    color: purple;
+    font-weight: lighter;
+    text-decoration: none;
+    
+}
