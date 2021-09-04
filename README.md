@@ -11,7 +11,7 @@ A website that allows users to take a timed quiz on the topic of Javascript fund
 ## Website
 
 
-![ScreenShot](/assets/.png)
+![ScreenShot](/assets/code-quiz.png)
 
 ## Contribution
 Made with ❤️ by Shabia Harrington
