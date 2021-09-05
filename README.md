@@ -9,6 +9,7 @@ A website that allows users to take a timed quiz on the topic of Javascript fund
 * JS
 
 ## Website
+https://srehmat13.github.io/coding-quiz/
 
 
 ![ScreenShot](/assets/images/code-quiz.png)
