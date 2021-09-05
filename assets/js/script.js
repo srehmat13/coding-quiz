@@ -2,9 +2,9 @@ var mainEl = document.querySelector('#main');
 var timeEl = document.querySelector('#countdown');
 var timeLeft = 75;
 var totalScore = 0;
-var quizOver = false;
 var startPage = document.querySelector('.start-page');
 var startQuiz = document.querySelector('#start-quiz');
+
 
 
 var score = function () {
@@ -23,9 +23,14 @@ var countdown = function () {
     timeEl.textContent = '';
     // Use `clearInterval()` to stop the timer
     clearInterval(timeInterval);
+    window.alert('Quiz is over!')
+    question.remove();
+    
   }
 }, 1000);
+
 }
+
 
 //High Score Page
 var highScores = function() {
@@ -40,7 +45,7 @@ var highScores = function() {
     highScoreDiv.appendChild(highScoreTitle);
 
 //To Display High Scores 
-    var initials = localStorage.getItem('intials');
+    var initials = localStorage.getItem('initials');
     var score = localStorage.getItem('score');
     var addHighScore = document.createElement('p');
     addHighScore.className = 'add-high-score';
@@ -56,7 +61,6 @@ var highScores = function() {
     goBack.textContent = 'Go back';
     goBack.addEventListener('click', function () {
     totalScore= 0;
-    quizOver = false;
     timeLeft = 75; 
     highScoreDiv.remove();
     start();
@@ -67,7 +71,7 @@ var highScores = function() {
     clearHighScores.className = 'clear-high-scores-button';
     clearHighScores.textContent = 'Clear high scores';
     clearHighScores.addEventListener('click', function () {
-    localStorage.removeItem('initals')
+    localStorage.removeItem('initials')
     localStorage.removeItem('score')
     highScoresList.remove();
     addHighScore.remove();
@@ -103,9 +107,9 @@ var highScores = function() {
 
     var enterInput = document.createElement('input');
     enterInput.className = 'score-input';
-    enterInput.setAttribute('id', 'input')
-    enterInput.setAttribute('name', 'initials');
+    enterInput.setAttribute('id', 'input');
     enterInput.setAttribute('type', 'text');
+    enterInput.setAttribute('name', 'input');
     inputDiv.appendChild(enterInput);
 
     var submit = document.createElement('button');
@@ -113,8 +117,8 @@ var highScores = function() {
     submit.className = 'submit-button';
     submit.addEventListener('click', function () {
     
-        var initals = document.getElementById('input').value;
-        localStorage.setItem('initals', initals);
+        var initials = document.getElementById('input').value;
+        localStorage.setItem('initials', initials);
         localStorage.setItem('score', totalScore);
         doneDiv.remove();
         highScores();
@@ -368,7 +372,6 @@ var highScores = function() {
         var wrongAnswer = function() {
         questionDiv.remove();
         enterScore();
-        quizOver = true;
           }
     
         var questionDiv = document.createElement('div');
@@ -394,8 +397,6 @@ var highScores = function() {
         answerChoiceOne.addEventListener('click', function () {
         score ();
         questionDiv.remove();
-        enterScore();
-        quizOver = true;
           })
     //Answer Choice Two 
         var answerChoiceTwo = document.createElement('button');
