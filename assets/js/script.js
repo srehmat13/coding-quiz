@@ -23,8 +23,7 @@ var countdown = function () {
     timeEl.textContent = '';
     // Use `clearInterval()` to stop the timer
     clearInterval(timeInterval);
-    window.alert('Quiz is over!')
-    question.remove();
+    alert('The time has elapsed. Quiz is over!');
     
   }
 }, 1000);
