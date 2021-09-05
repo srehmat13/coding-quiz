@@ -82,7 +82,7 @@ header {
   border: 2.5px solid var(--hoverColor);
 }
 
-/* Score input screen */
+/* Score Input */
 .done-div {
   display: grid;
   place-items: center;
@@ -161,3 +161,6 @@ header {
   border-radius: 5px;
   padding: 5px 10px;
 }
+
+
+ 
